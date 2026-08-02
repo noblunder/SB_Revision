@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.bak
+predictions_repro/
+analysis_repro/
+repro/
+.env
+*.tmp
