@@ -41,7 +41,7 @@ REFUSAL_PATTERNS = [
 ]
 REFUSAL_RE = re.compile("|".join(REFUSAL_PATTERNS), re.I)
 
-# Numeric extraction (matches eval_v3_unit_aware.py)
+# Numeric extraction (matches eval/eval_canonical.py)
 NUM_UNIT_RE = re.compile(
     r"(-?\d+(?:[\.,]\d+)?(?:\s*[eE][+-]?\d+)?)\s*"
     r"(m\^[23]|m[²³]|m[23]|mm\^[23]|mm[²³]|mm[23]|mm|m|cm\^[23]|cm[²³]|cm[23])?"
@@ -86,7 +86,7 @@ def classify(pred: str, task: str, finish_reason: str | None = None) -> dict:
         flags["refusal"] = True
         return flags
 
-    # Parse: extract last number+unit (smart, mirrors eval_v3_unit_aware.py)
+    # Parse: extract last number+unit (mirrors eval/eval_canonical.py)
     matches = list(NUM_UNIT_RE.finditer(pred))
     last_with_unit = None
     for m in matches:

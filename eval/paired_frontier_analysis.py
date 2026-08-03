@@ -31,7 +31,7 @@ from pathlib import Path
 import numpy as np
 
 
-# Re-use the smart numeric extractor from eval_v3_unit_aware.py
+# Numeric extraction follows the same contract as eval/eval_canonical.py
 NUM_UNIT_RE = re.compile(
     r"(-?\d+(?:[\.,]\d+)?(?:\s*[eE][+-]?\d+)?)\s*"
     r"(m\^[23]|m[²³]|m[23]|mm\^[23]|mm[²³]|mm[23]|mm|m|cm\^[23]|cm[²³]|cm[23])?"

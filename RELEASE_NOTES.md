@@ -27,6 +27,15 @@ first number in an output and grades against the rounded display string. It
 reproduces the multiple-choice columns but not the numeric ones. It has been
 replaced by the canonical evaluator, as undertaken in our response.
 
+`eval/eval_v3_unit_aware.py` is removed as redundant. It was a second grader
+sitting in `eval/`, and it is **item-for-item identical to the canonical
+evaluator**: graded against every unit-bearing item in the release — 29,239 of
+them — the two agree on all 29,239. It therefore scores nothing the canonical
+evaluator does not, is imported by nothing, and could not run in any case, since
+its ground-truth root was the literal string `<SHIPBENCH_ROOT>`. Two scorers
+side by side beside a claim that one implementation does the scoring is the
+defect this release exists to correct, so it is gone rather than annotated.
+
 ### Reproduction that runs
 
 ```bash

@@ -80,7 +80,6 @@ code/
 ├── eval/
 │   ├── eval_canonical.py           # THE evaluator — every reported number
 │   ├── build_table3.py             # assembles Table 3 from prediction logs
-│   ├── eval_v3_unit_aware.py       # v3-prompt numeric grader (same parser)
 │   ├── paired_frontier_analysis.py # paired bootstrap + McNemar + Clopper-Pearson
 │   └── validate_predictions.py     # output-quality diagnostics (does not score)
 ├── dataset_generation/             # construction pipeline + 6 generators
