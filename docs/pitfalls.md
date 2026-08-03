@@ -21,16 +21,17 @@ under-specified semantics, or input-side label leak.
 ## Numbering
 
 Seven, and only these seven, are the benchmark-design pitfalls this work
-documents and corrects. The submitted PDF contains two cross-references that do
-not match — a conclusion that reads "nine benchmark-design pitfalls" and one
-citation of a "Pitfall 9". Both are residue from a longer manuscript version in
-which the numbered series continued past the task-design pitfalls; the series was
-cut during condensation but the two references were not updated. They are
-corrected in the revision.
+documents and corrects. The submitted PDF contains references that do not match:
+a contributions bullet reading "Nine pitfalls (7 task-design + 2
+evaluation-design)" that names a "Pitfall 8" and a "Pitfall 9", and a conclusion
+reading "nine benchmark-design pitfalls". These are residue from a longer
+manuscript version in which the numbered series continued past the task-design
+pitfalls; the series was cut during condensation but the references were not
+updated. They are corrected in the revision.
 
 The observations those references pointed at are evaluation findings rather than
-benchmark-construction defects, and they remain in the paper as such: §5 reports
-prompt sensitivity, including the vendor-asymmetric case in which a clarified
-prompt that helps one model family induces refusal in another. They are not
-listed here because nothing about the benchmark's construction was corrected in
-response to them.
+benchmark-construction defects, and they remain in the paper as such: the
+Discussion reports prompt sensitivity, including the vendor-asymmetric case in
+which a clarified prompt that helps one model family induces refusal in another.
+They are not listed here because nothing about the benchmark's construction was
+corrected in response to them.
