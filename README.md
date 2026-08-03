@@ -30,6 +30,14 @@ not match the released logs cell for cell.
 accuracy figure in the paper. Every other script under `eval/` is diagnostic.
 The full scoring contract is documented at the top of the file; in short:
 
+Two invocations of it are used, and which one applies depends on the table.
+**Table 3 and the paired frontier statistics use the strict unit rule**, the
+default. **The v3 prompt-ablation table uses `--lenient-unit`**, which scores the
+numeric value and ignores the unit string — that is what the flag is for. Scoring
+the v3 logs under the strict rule instead moves several near-zero cells by
+0.5–1.7 pp. The two rules are deliberate, not interchangeable, and the revision
+will label them in the table captions.
+
 | | |
 |---|---|
 | Ground truth | `metadata["value"]`, full precision — never the rounded `answer` display string |
