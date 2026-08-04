@@ -6,7 +6,7 @@ Anonymous code release for the ShipBench paper.
 changes code and documentation only; no dataset file, task file, prediction log,
 or reported number differs from the release that accompanied the submission.
 
-## Reproduce Table 3 in one command, at no cost
+## Score Table 3 from the released logs, in one command
 
 ```bash
 export SHIPBENCH_ROOT=/path/to/dataset       # contains task_files/ and predictions/
@@ -14,9 +14,9 @@ bash examples/reproduce_table3.sh
 ```
 
 This scores the released prediction logs with the canonical evaluator and prints
-the full 6 × 9 grid. It needs no API key and takes about a minute. **The released
-prediction logs are the reproducible artifact**, so this is the path that
-regenerates the published table.
+the full 6 × 9 grid. It needs no API key. **The released
+prediction logs are the reproducible artifact**, so this is the path to run
+rather than re-querying the APIs.
 
 `--rerun-inference` additionally re-queries the two frontier APIs before scoring
 (about two hours; the paper reports ~$200 for the full frontier spend). That is
@@ -78,7 +78,7 @@ code/
 │   ├── run_frontier_openai.py      # OpenAI gpt-5.5 (concurrent)
 │   └── run_vlm_inference.py        # open-weight VLM inference (HF)
 ├── eval/
-│   ├── eval_canonical.py           # THE evaluator — every reported number
+│   ├── eval_canonical.py           # THE evaluator — all scoring goes through it
 │   ├── build_table3.py             # assembles Table 3 from prediction logs
 │   ├── paired_frontier_analysis.py # paired bootstrap + McNemar + Clopper-Pearson
 │   └── validate_predictions.py     # output-quality diagnostics (does not score)
@@ -159,9 +159,8 @@ rather than a packaged one-command rebuild: task identifiers evolved during
 construction — several pitfalls in [docs/pitfalls.md](docs/pitfalls.md) record
 tasks that were reformulated or withdrawn — so the QA-building stages do not
 map one-to-one onto the final `task_files/` names. **The released
-`task_files/` are the authoritative task definitions**, and every reported
-number is reproduced from them plus `predictions/` via
-`eval/eval_canonical.py`.
+`task_files/` are the authoritative task definitions**, and the reported numbers
+are scored from them plus `predictions/` via `eval/eval_canonical.py`.
 
 ## Task files and ground-truth precedence
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Paired Claude Opus 4.7 <-> OpenAI gpt-5.5 analysis, from the released
-# prediction logs. Does NOT re-run inference. Cost: $0. Time: under a minute.
+# prediction logs. Does NOT re-run inference. Cost: $0.
 #
 # This is the script cited in §4 of the paper for the released prediction logs.
 #

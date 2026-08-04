@@ -40,7 +40,7 @@ defect this release exists to correct, so it is gone rather than annotated.
 
 ```bash
 export SHIPBENCH_ROOT=/path/to/dataset
-bash examples/reproduce_table3.sh      # Table 3, no API key, about a minute
+bash examples/reproduce_table3.sh      # Table 3's model grid, no API key
 bash examples/reproduce_paired.sh      # paired frontier statistics
 ```
 
@@ -58,7 +58,7 @@ run on machines whose default code page is not UTF-8.
 
 ### Scope
 
-Scoring the released prediction logs with `eval/eval_canonical.py` reproduces
-Table 3 and the paired frontier statistics reported in the checklist. Files that
-belonged to later working versions and were bundled in error are not part of
+`eval/eval_canonical.py` scores the released prediction logs and prints Table 3's
+model grid and the paired frontier statistics reported in the checklist. Files
+that belonged to later working versions and were bundled in error are not part of
 this release.

@@ -3,7 +3,7 @@
 #
 #   bash examples/reproduce_table3.sh
 #       Scores the released prediction logs with eval/eval_canonical.py.
-#       No API key, no cost, ~1 minute.
+#       No API key, no cost.
 #
 #   bash examples/reproduce_table3.sh --rerun-inference
 #       Re-runs the two frontier systems first, then scores the new logs.
